@@ -7,3 +7,9 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/merlin"]
+	path = bundle/merlin
+	url = https://github.com/the-lambda-church/merlin.git
+[submodule "bundle/ocp-ident"]
+	path = bundle/ocp-ident
+	url = https://github.com/OCamlPro/ocp-indent.git
