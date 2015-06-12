@@ -13,3 +13,6 @@
 [submodule "bundle/ocp-ident"]
 	path = bundle/ocp-ident
 	url = https://github.com/OCamlPro/ocp-indent.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = https://github.com/vim-scripts/taglist.vim
