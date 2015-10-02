@@ -33,6 +33,7 @@ let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 "Now I'm learning Vimscript the hard way with Steve Losh
 "here http://learnvimscriptthehardway.stevelosh.com/
 echo "(>^.^<) *-..-> I am controlling you!"
+echo "This beautiful hottie is a true goddess!"
 
 "Color scheme
 " Make the terminal use 256 colors which is not the case by default
