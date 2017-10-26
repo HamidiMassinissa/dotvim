@@ -6,34 +6,36 @@ call pathogen#helptags()
 filetype plugin indent on
 
 set autoindent              "set auto indentation
-set background=dark         "set background color
-set backupdir=~/.tmp
+"set background=dark         "set background color
+set backupdir=/tmp
 set mouse=a					"enable the mouse
-set colorcolumn=80			"put fences to line codes,
+"set colorcolumn=80			"put fences to line codes,
 							"yep! we must not go beyond this limit
-set textwidth=78			"A longer line will be broken
+"set textwidth=78			"A longer line will be broken
 							"But you have to move to the start of the file
 							"then type gqG ('gg' moves you to the begining of
 							"file while 'G' to the end
-set tabstop=4				"tabulation amount
+set tabstop=4 shiftwidth=4 expandtab "tabulation amount
 
 set smartindent
 set laststatus=2 			"show the status line
 set number
 
-set rtp+=/usr/local/share/ocamlmerlin/vim		"adding merlin to the rtp
-set rtp+=/usr/local/share/ocamlmerlin/vimbufsync
+"set rtp+=/usr/local/share/ocamlmerlin/vim		"adding merlin to the rtp
+"set rtp+=/usr/local/share/ocamlmerlin/vimbufsync
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
 let g:syntastic_ocaml_checkers = ['merlin']		"so that syntastic displays
 												"the errors detected by merlin
 
 let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 
-
+let g:syntastic_java_javac_classpath= '.:./*/:/usr/share/java/*.jar'
 
 "Now I'm learning Vimscript the hard way with Steve Losh
 "here http://learnvimscriptthehardway.stevelosh.com/
-echo "(>^.^<) *-..-> I am controlling you!"
-echo "This beautiful hottie is a true goddess!"
+"echo "(>^.^<) *-..-> I am controlling you!"
+"echo "This beautiful hottie is a true goddess!"
 
 "Color scheme
 " Make the terminal use 256 colors which is not the case by default
@@ -41,7 +43,16 @@ echo "This beautiful hottie is a true goddess!"
 set t_Co=256
 " ... then choose a colorscheme that suits your desires. Here I choosed one
 " from those categorized at http://cocopon.me/app/vim-color-gallery/
-colorscheme hybrid
+"colorscheme hybrid
+"colorscheme summerfruit256
+"colorscheme phd
+"colorscheme github
+let g:solarized_contrast="high"
+let g:solarized_termcolors=256
+syntax enable
+"set background=light
+set background=dark
+"colorscheme solarized 
 
 "	*-._/^-.->	MODAL MAPINGS
 
@@ -82,3 +93,63 @@ nnoremap	<silent> <c-h>	:wincmd h<CR>
 nnoremap	<silent> <c-j>	:wincmd j<CR>
 nnoremap	<silent> <c-k>	:wincmd k<CR>
 nnoremap	<silent> <c-l>	:wincmd l<CR>
+
+"shortcut to open NERDtree
+let mapleader = ","
+nmap <leader>ne :NERDTree<cr>
+
+"customizing size of NERDtree window
+let g:NERDtreeWinSize=20
+
+"make NERDtree ignore C/C++ object files
+let NERDTreeIgnore=['\.o$', '\~$']
+
+"recommended settings for syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" making syntastic work with std c++11 features
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
+
+"setting path to libclang.so for clang_complete autocompletion plugin
+let g:clang_library_path="/usr/lib/x86_64-linux-gnu"
+let g:clang_complete_auto = 1
+
+" Complete options (disable preview scratch window)
+set completeopt=menu,menuone,longest
+" Limit popup menu height
+set pumheight=15
+" Show clang errors in the quickfix window
+let g:clang_complete_copen = 1
+
+" enable clang_complete to work with std c++11 features
+let g:clang_user_options="-std=c++0x"
+
+"setting up powerline - fency stuff for status line
+set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+
+" Always show statusline
+set laststatus=2
+
+au BufEnter *.ml setf ocaml
+au BufEnter *.mli setf ocaml
+au FileType ocaml call FT_ocaml()
+function FT_ocaml()
+    "set textwidth=80
+    "set colorcolumn=80
+    set shiftwidth=2
+    set tabstop=2
+    " ocp-indent with ocp-indent-vim
+    let opamshare=system("opam config var share | tr -d '\n'")
+    execute "autocmd FileType ocaml source".opamshare."/ocp-indent/vim/indent/ocaml.vim"
+    filetype indent on
+    filetype plugin indent on
+endfunction
+
+set backspace=indent,eol,start
