@@ -55,3 +55,6 @@
 [submodule "bundle/vim-github-colorscheme"]
 	path = bundle/vim-github-colorscheme
 	url = https://github.com/endel/vim-github-colorscheme.git
+[submodule "vim-speeddating"]
+	path = vim-speeddating
+	url = https://github.com/tpope/vim-speeddating.git
