@@ -21,6 +21,9 @@ set smartindent
 set laststatus=2 			"show the status line
 set number
 
+"setting up powerline - fency stuff for status line
+set rtp+=~/.local/lib/python2.7/dist-packages/powerline/bindings/vim/
+
 "set rtp+=/usr/local/share/ocamlmerlin/vim		"adding merlin to the rtp
 "set rtp+=/usr/local/share/ocamlmerlin/vimbufsync
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
@@ -52,7 +55,7 @@ let g:solarized_termcolors=256
 syntax enable
 "set background=light
 set background=dark
-"colorscheme solarized 
+colorscheme solarized 
 
 "	*-._/^-.->	MODAL MAPINGS
 
@@ -105,9 +108,9 @@ let g:NERDtreeWinSize=20
 let NERDTreeIgnore=['\.o$', '\~$']
 
 "recommended settings for syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -130,9 +133,6 @@ let g:clang_complete_copen = 1
 
 " enable clang_complete to work with std c++11 features
 let g:clang_user_options="-std=c++0x"
-
-"setting up powerline - fency stuff for status line
-set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 
 " Always show statusline
 set laststatus=2
