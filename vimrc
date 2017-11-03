@@ -153,3 +153,6 @@ function FT_ocaml()
 endfunction
 
 set backspace=indent,eol,start
+
+" disable folding methods in python-mode
+set nofoldenable
