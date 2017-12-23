@@ -156,3 +156,13 @@ set backspace=indent,eol,start
 
 " disable folding methods in python-mode
 set nofoldenable
+
+" disable syntasticCheck for latex
+let g:syntastic_mode_map = {
+    \ "mode": "active",
+    \ "passive_filetypes": ["tex"] }
+
+" syntastic check for "header file not found"
+" the header files are searched inside the current and parent directory by default. So:
+" let g:syntastic_c_include_dirs = [ '../include', 'include' ]
+" YOU HAVE TO DO IT IN A .lvimrc IN THE CONCERNED LOCAL DIRECTORY
