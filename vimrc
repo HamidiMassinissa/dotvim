@@ -51,7 +51,7 @@ let g:solarized_contrast="high"
 let g:solarized_termcolors=256
 syntax enable
 "set background=light
-set background=dark
+"set background=dark
 colorscheme solarized 
 
 "	*-._/^-.->	MODAL MAPINGS
