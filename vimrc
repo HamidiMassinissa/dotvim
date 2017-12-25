@@ -21,6 +21,9 @@ set smartindent
 set laststatus=2 			"show the status line
 set number
 
+"setting up powerline - fency stuff for status line
+set rtp+=~/.local/lib/python2.7/dist-packages/powerline/bindings/vim/
+
 "set rtp+=/usr/local/share/ocamlmerlin/vim		"adding merlin to the rtp
 "set rtp+=/usr/local/share/ocamlmerlin/vimbufsync
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
@@ -105,9 +108,9 @@ let g:NERDtreeWinSize=20
 let NERDTreeIgnore=['\.o$', '\~$']
 
 "recommended settings for syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -131,9 +134,6 @@ let g:clang_complete_copen = 1
 " enable clang_complete to work with std c++11 features
 let g:clang_user_options="-std=c++0x"
 
-"setting up powerline - fency stuff for status line
-set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
-
 " Always show statusline
 set laststatus=2
 
@@ -153,3 +153,16 @@ function FT_ocaml()
 endfunction
 
 set backspace=indent,eol,start
+
+" disable folding methods in python-mode
+set nofoldenable
+
+" disable syntasticCheck for latex
+let g:syntastic_mode_map = {
+    \ "mode": "active",
+    \ "passive_filetypes": ["tex"] }
+
+" syntastic check for "header file not found"
+" the header files are searched inside the current and parent directory by default. So:
+" let g:syntastic_c_include_dirs = [ '../include', 'include' ]
+" YOU HAVE TO DO IT IN A .lvimrc IN THE CONCERNED LOCAL DIRECTORY
