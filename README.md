@@ -25,7 +25,7 @@ VimConfig
 * Get ctags: `apt-get install exuberant-ctags`
 
 # How it looks
-comming...
+![screenshot of how vim looks like with this configuration](https://raw.githubusercontent.com/HamidiMassinissa/dotvim/master/images/vim-screenshot.png)
 
 # Troubleshooting
 Some users either on MacOS or Linux are experiencing some troubles getting NERDTree to work. One of the proposed solutions is to replace the current NERDTree submodule by https://github.com/scrooloose/nerdtree. Many thanks to <b>Mathias Ramparison</b>.
