@@ -28,4 +28,4 @@ VimConfig
 comming...
 
 # Troubleshooting
-Some users either on MacOS or Linux are experiencing some troubles getting NERDTree to work. One of the proposed solutions is to replace the current NERDTree submodule by . Many thanks to <b>Mathias Ramparison</b>.
+Some users either on MacOS or Linux are experiencing some troubles getting NERDTree to work. One of the proposed solutions is to replace the current NERDTree submodule by https://github.com/scrooloose/nerdtree. Many thanks to <b>Mathias Ramparison</b>.
