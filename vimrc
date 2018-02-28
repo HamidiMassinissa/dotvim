@@ -54,7 +54,7 @@ let g:solarized_contrast="high"
 let g:solarized_termcolors=256
 syntax enable
 "set background=light
-set background=dark
+"set background=dark
 colorscheme solarized
 
 "	*-._/^-.->	MODAL MAPINGS
@@ -166,3 +166,12 @@ let g:syntastic_mode_map = {
 " the header files are searched inside the current and parent directory by default. So:
 " let g:syntastic_c_include_dirs = [ '../include', 'include' ]
 " YOU HAVE TO DO IT IN A .lvimrc IN THE CONCERNED LOCAL DIRECTORY
+
+" <F5> now updates the tags file
+map <f5> :!ctags -R .<cr>
+
+" ctags additional key mappings
+"  [x] Ctrl + \ : Open the definition in a new tab
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+"  [x] Alt + ] : Open the definition in a vertical split
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
