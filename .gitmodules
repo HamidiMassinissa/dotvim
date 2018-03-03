@@ -67,3 +67,9 @@
 [submodule "bundle/grproject"]
 	path = bundle/grproject
 	url = git@github.com:mbant/grproject.vim.git
+[submodule "misc/powerline"]
+	path = misc/powerline
+	url = https://github.com/powerline/powerline
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline

@@ -175,3 +175,17 @@ map <f5> :!ctags -R .<cr>
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 "  [x] Alt + ] : Open the definition in a vertical split
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+
+"######################
+" Airline configuration
+"######################
+" populate the g:airline_symbols dictionary with the proper font glyphs for various symbol
+let g:airline_powerline_fonts = 1
+
+" Smarter tab line with airline
+let g:airline#extensions#tabline#enabled = 1
+
+"Separators can be configured independently for the tabline, so here is how you can define "straight" tabs:
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
