@@ -15,7 +15,7 @@ set mouse=a					"enable the mouse
 							"But you have to move to the start of the file
 							"then type gqG ('gg' moves you to the begining of
 							"file while 'G' to the end
-set tabstop=4 shiftwidth=4 expandtab "tabulation amount
+set tabstop=2 shiftwidth=2 expandtab "tabulation amount
 
 set smartindent
 set laststatus=2 			"show the status line
@@ -189,3 +189,23 @@ let g:airline#extensions#tabline#enabled = 1
 "Separators can be configured independently for the tabline, so here is how you can define "straight" tabs:
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+
+"###################
+" Indentation issues
+"###################
+" Indentation issues in C files ===> already set but is overloaded by
+" vim-linux-coding-style ===> see below for the solution
+"" show existing tab with 4 spaces width
+"set tabstop=4
+"" when indenting with '>', use 4 spaces width
+"set shiftwidth=4
+"" On pressing tab, insert 4 spaces
+"set expandtab
+
+"
+" For those who want to apply these options conditionally, you can define an
+" array of patterns in your vimrc and these options will be applied only if
+" the buffer's path matches one of the pattern. In the following example,
+" options will be applied only if "/linux/" or "/kernel" is in buffer's path.
+"
+let g:linuxsty_patterns = [ "/linux/", "/kernel/" ]
