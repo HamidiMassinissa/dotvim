@@ -73,3 +73,9 @@
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline
+[submodule "bundle/vimtex"]
+	path = bundle/vimtex
+	url = https://github.com/lervag/vimtex
+[submodule "bundle/vimagit"]
+	path = bundle/vimagit
+	url = https://github.com/jreybert/vimagit
