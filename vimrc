@@ -15,7 +15,7 @@ set mouse=a					"enable the mouse
 							"But you have to move to the start of the file
 							"then type gqG ('gg' moves you to the begining of
 							"file while 'G' to the end
-set tabstop=2 shiftwidth=2 expandtab "tabulation amount
+set tabstop=4 shiftwidth=4 expandtab "tabulation amount
 
 set smartindent
 set laststatus=2 			"show the status line
@@ -209,3 +209,6 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 " options will be applied only if "/linux/" or "/kernel" is in buffer's path.
 "
 let g:linuxsty_patterns = [ "/linux/", "/kernel/" ]
+
+"" Make comments italic
+highlight Comment cterm=italic
