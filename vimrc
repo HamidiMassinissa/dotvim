@@ -209,3 +209,6 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 " options will be applied only if "/linux/" or "/kernel" is in buffer's path.
 "
 let g:linuxsty_patterns = [ "/linux/", "/kernel/" ]
+
+"" Make comments italic
+highlight Comment cterm=italic
