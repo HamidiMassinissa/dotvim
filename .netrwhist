@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/home/hamidi/seancestp/infographie/algorithmeDeSmith/java-sources'
 let g:netrw_dirhist_2='/home/hamidi/seancestp/projetlong/ppx_import/src'
+let g:netrw_dirhist_3='/home/hamidi/current-work/journalier/_ideas'

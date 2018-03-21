@@ -1,9 +1,31 @@
 # dotvim
 VimConfig
 
-# Dependencies
-Get Pathogen
+# ctags key bindings
+## tags generation
+* `<F5>` allow you to generate as well as refresh tags list
 
+
+<b>N.B.</b> You can add a `~/.ctags` to your home directory in which you can specify, among other things, folders that you don't want to consider when generating tags list of your project. The following is an example of a `.ctags` file for a python project:
 ```
-apt-get install exuberant-ctags
+--python-kinds=-iv
+--exclude=build
+--exclude=dist
 ```
+
+## navigation between definitions
+* `Ctrl+]` - go to definition
+* `Ctrl+T` - Jump back from the definition.
+* `Ctrl+W` `Ctrl+]` - Open the definition in a horizontal split
+* `Ctrl+\` - Open the definition in a new tab
+* `Alt+]` - Open the definition in a vertical split
+
+# Dependencies
+* Get pathogen
+* Get ctags: `apt-get install exuberant-ctags`
+
+# How it looks
+![screenshot of how vim looks like with this configuration](https://raw.githubusercontent.com/HamidiMassinissa/dotvim/master/images/vim-screenshot.png)
+
+# Troubleshooting
+Some users either on MacOS or Linux are experiencing some troubles getting NERDTree to work. One of the proposed solutions is to replace the current NERDTree submodule by https://github.com/scrooloose/nerdtree. Many thanks to <b>Mathias Ramparison</b>.

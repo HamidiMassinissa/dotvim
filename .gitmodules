@@ -64,3 +64,21 @@
 [submodule "bundle/vim-localvimrc"]
 	path = bundle/vim-localvimrc
 	url = https://github.com/embear/vim-localvimrc.git
+[submodule "bundle/grproject"]
+	path = bundle/grproject
+	url = git@github.com:mbant/grproject.vim.git
+[submodule "misc/powerline"]
+	path = misc/powerline
+	url = https://github.com/powerline/powerline
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "bundle/vimtex"]
+	path = bundle/vimtex
+	url = https://github.com/lervag/vimtex
+[submodule "bundle/vimagit"]
+	path = bundle/vimagit
+	url = https://github.com/jreybert/vimagit
+[submodule "bundle/DoxygenToolkit.vim"]
+	path = bundle/DoxygenToolkit.vim
+	url = https://github.com/vim-scripts/DoxygenToolkit.vim.git
