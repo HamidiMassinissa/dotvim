@@ -211,4 +211,8 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:linuxsty_patterns = [ "/linux/", "/kernel/" ]
 
 "" Make comments italic
-highlight Comment cterm=italic
+" :highlight Comment cterm=italic
+
+"" Disable rope
+"" vim hangs on write with [Pymode] Regenerate autoimport cache when I edit .py files in ~ #525
+let g:pymode_rope = 0
