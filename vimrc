@@ -221,3 +221,8 @@ let g:pymode_rope = 0
 
 "" Requirements for vim-markdown-preview
 let vim_markdown_preview_github=1
+" :highlight Comment cterm=italic
+
+"" Disable rope
+"" vim hangs on write with [Pymode] Regenerate autoimport cache when I edit .py files in ~ #525
+let g:pymode_rope = 0
