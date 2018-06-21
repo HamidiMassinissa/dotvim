@@ -46,7 +46,7 @@ let g:syntastic_java_javac_classpath= '.:./*/:/usr/share/java/*.jar'
 set t_Co=256
 " ... then choose a colorscheme that suits your desires. Here I choosed one
 " from those categorized at http://cocopon.me/app/vim-color-gallery/
-"colorscheme hybrid
+colorscheme hybrid
 "colorscheme summerfruit256
 "colorscheme phd
 "colorscheme github
@@ -54,8 +54,8 @@ let g:solarized_contrast="high"
 let g:solarized_termcolors=256
 syntax enable
 "set background=light
-"set background=dark
-colorscheme solarized
+set background=dark
+"colorscheme solarized
 
 "	*-._/^-.->	MODAL MAPINGS
 
@@ -212,3 +212,12 @@ let g:linuxsty_patterns = [ "/linux/", "/kernel/" ]
 
 "" Make comments italic
 highlight Comment cterm=italic
+
+"" Discard .pyc files from NerdTree
+let NERDTreeIgnore = ['\.pyc$']
+
+"" Disable rope project regeneration
+let g:pymode_rope = 0
+
+"" Requirements for vim-markdown-preview
+let vim_markdown_preview_github=1

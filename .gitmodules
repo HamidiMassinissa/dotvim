@@ -79,3 +79,6 @@
 [submodule "bundle/vimagit"]
 	path = bundle/vimagit
 	url = https://github.com/jreybert/vimagit
+[submodule "bundle/vim-markdown-preview"]
+	path = bundle/vim-markdown-preview
+	url = https://github.com/JamshedVesuna/vim-markdown-preview
