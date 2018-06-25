@@ -19,9 +19,9 @@
 [submodule "colors/vim-hybrid"]
 	path = colors/vim-hybrid
 	url = git@github.com:w0ng/vim-hybrid.git
-[submodule "bundle/clang_complete"]
-	path = bundle/clang_complete
-	url = git@github.com:Rip-Rip/clang_complete.git
+#[submodule "bundle/clang_complete"]
+#	path = bundle/clang_complete
+#	url = https://github.com/Rip-Rip/clang_complete.git
 [submodule "bundle/tlib_vim"]
 	path = bundle/tlib_vim
 	url = https://github.com/tomtom/tlib_vim.git
@@ -64,9 +64,9 @@
 [submodule "bundle/vim-localvimrc"]
 	path = bundle/vim-localvimrc
 	url = https://github.com/embear/vim-localvimrc.git
-[submodule "bundle/grproject"]
-	path = bundle/grproject
-	url = git@github.com:mbant/grproject.vim.git
+#[submodule "bundle/grproject"]
+#	path = bundle/grproject
+#	url = https://github.com/mbr0wn/grproject.vim.git 
 [submodule "misc/powerline"]
 	path = misc/powerline
 	url = https://github.com/powerline/powerline
@@ -79,3 +79,9 @@
 [submodule "bundle/vimagit"]
 	path = bundle/vimagit
 	url = https://github.com/jreybert/vimagit
+[submodule "bundle/clang_complete"]
+	path = bundle/clang_complete
+	url = https://github.com/Rip-Rip/clang_complete.git
+[submodule "bundle/grproject.vim"]
+	path = bundle/grproject.vim
+	url = https://github.com/mbr0wn/grproject.vim.git
