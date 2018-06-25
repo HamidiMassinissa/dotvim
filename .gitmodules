@@ -85,3 +85,9 @@
 [submodule "bundle/grproject.vim"]
 	path = bundle/grproject.vim
 	url = https://github.com/mbr0wn/grproject.vim.git
+[submodule "bundle/vim-markdown-preview"]
+	path = bundle/vim-markdown-preview
+	url = https://github.com/JamshedVesuna/vim-markdown-preview
+[submodule "bundle/DoxygenToolkit.vim"]
+	path = bundle/DoxygenToolkit.vim
+	url = https://github.com/vim-scripts/DoxygenToolkit.vim.git

@@ -213,8 +213,16 @@ let g:linuxsty_patterns = [ "/linux/", "/kernel/" ]
 "" Make comments italic
 highlight Comment cterm=italic
 
-"" Disable rope in pymode
+"" Discard .pyc files from NerdTree
+let NERDTreeIgnore = ['\.pyc$']
+
+"" Disable rope project regeneration
 let g:pymode_rope = 0
 
-"" Ignore .pyc files in NerdTree
-let NERDTreeIgnore = ['\.pyc$']
+"" Requirements for vim-markdown-preview
+let vim_markdown_preview_github=1
+" :highlight Comment cterm=italic
+
+"" Disable rope
+"" vim hangs on write with [Pymode] Regenerate autoimport cache when I edit .py files in ~ #525
+let g:pymode_rope = 0
